@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FreeTools Hub</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-surface text-slate-100">
+    <div class="mesh-glow-1"></div>
+    <div class="mesh-glow-2"></div>
+    <header class="sticky top-0 z-40 nav-glass">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
+            <div class="hidden items-center space-x-8 md:flex">
+                <a href="/" class="text-sm font-medium hover:text-brand-primary transition-colors">Home</a>
+                <a href="/about.html" class="text-sm font-medium text-brand-primary transition-colors">About</a>
+                <a href="/contact.html" class="rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold text-white">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="text-2xl md:hidden"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden flex-col border-t border-white/5 bg-dark-surface px-6 py-4 md:hidden">
+            <a href="/" class="py-3 text-lg font-medium">Home</a>
+            <a href="/about.html" class="py-3 text-lg font-medium text-brand-primary">About</a>
+            <a href="/contact.html" class="mt-2 rounded-xl bg-brand-primary py-3 text-center text-lg font-semibold text-white">Contact</a>
+        </div>
+    </header>
+
+    <main class="py-20">
+        <div class="container mx-auto max-w-4xl px-6">
+            <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">About FreeTools Hub</h1>
+            <p class="mt-6 text-xl text-slate-400">Our mission is to provide the fastest, most reliable, and secure online tools for creators, developers, and everyday users.</p>
+            
+            <div class="ad-container mt-12">
+                <div class="ad-placeholder">Advertisement: Top Ad</div>
+            </div>
+
+            <div class="prose prose-invert prose-slate mt-16 max-w-none">
+                <h2 class="text-2xl font-bold">The Story</h2>
+                <p>
+                    FreeTools Hub was born out of a simple need: a single, clean destination for those small digital tasks that arise every day. Whether it's formatting a messy JSON string or generating a quick QR code for a presentation, we believe these tools should be accessible to everyone, for free, without annoying popups or data-harvesting registration forms.
+                </p>
+                
+                <h2 class="text-2xl font-bold mt-12">Our Philosophy</h2>
+                <div class="grid gap-6 mt-8 md:grid-cols-2">
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="font-bold text-white">Privacy First</h3>
+                        <p class="mt-2 text-sm text-slate-400">All logic is executed in your browser. We don't store your sensitive data or generated passwords.</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="font-bold text-white">No Registration</h3>
+                        <p class="mt-2 text-sm text-slate-400">Use any tool instantly. No email required, no strings attached.</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="font-bold text-white">Speed Matters</h3>
+                        <p class="mt-2 text-sm text-slate-400">Lightweight code ensures tools load faster than a cup of coffee.</p>
+                    </div>
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="font-bold text-white">Simple UX</h3>
+                        <p class="mt-2 text-sm text-slate-400">Professional design that doesn't distract you from the task at hand.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ad-container mt-12">
+                <div class="ad-placeholder">Advertisement: Bottom Ad</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-dark-surface py-12 text-center text-sm text-slate-500">
+        <p>© 2026 FreeTools Hub. Built for the community.</p>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+</body>
+</html>

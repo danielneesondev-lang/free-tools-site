@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FreeTools Hub</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-surface text-slate-100">
+    <div class="mesh-glow-1"></div>
+    <div class="mesh-glow-2"></div>
+    <header class="sticky top-0 z-40 nav-glass">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
+            <div class="hidden items-center space-x-8 md:flex">
+                <a href="/" class="text-sm font-medium hover:text-brand-primary transition-colors">Home</a>
+                <a href="/about.html" class="text-sm font-medium hover:text-brand-primary transition-colors">About</a>
+                <a href="/contact.html" class="rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold text-white">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="text-2xl md:hidden"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="py-20 lg:py-32">
+        <div class="container mx-auto px-6">
+            <div class="grid gap-12 lg:grid-cols-2">
+                <div>
+                    <h1 class="text-4xl font-extrabold md:text-6xl">Get in <span class="text-brand-primary">Touch</span></h1>
+                    <p class="mt-6 text-xl text-slate-400">Have a suggestion for a new tool? Found a bug? We'd love to hear from you.</p>
+                    
+                    <div class="mt-12 space-y-8 text-lg font-medium">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>hello@freetoolshub.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <span>Digital Nomad Way, Cloud City</span>
+                        </div>
+                    </div>
+
+                    <div class="ad-container mt-12 overflow-hidden rounded-3xl">
+                        <div class="ad-placeholder h-48">Advertisement: Sidebar Ad</div>
+                    </div>
+                </div>
+
+                <div class="glass rounded-[2.5rem] p-8 md:p-12">
+                    <form action="#" class="space-y-6">
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <div>
+                                <label class="mb-2 block text-sm font-semibold text-slate-300">Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full rounded-xl border border-white/10 bg-slate-950/50 py-4 px-5 focus:border-brand-primary focus:outline-none transition-all backdrop-blur-sm">
+                            </div>
+                            <div>
+                                <label class="mb-2 block text-sm font-semibold text-slate-300">Email</label>
+                                <input type="email" placeholder="john@example.com" class="w-full rounded-xl border border-white/10 bg-slate-950/50 py-4 px-5 focus:border-brand-primary focus:outline-none transition-all backdrop-blur-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-sm font-semibold text-slate-300">Subject</label>
+                            <select class="w-full rounded-xl border border-white/10 bg-slate-950/50 py-4 px-5 focus:border-brand-primary focus:outline-none transition-all appearance-none cursor-pointer backdrop-blur-sm">
+                                <option class="bg-slate-900">New Tool Request</option>
+                                <option class="bg-slate-900">Bug Report</option>
+                                <option class="bg-slate-900">General Inquiry</option>
+                                <option class="bg-slate-900">Advertising</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="mb-2 block text-sm font-semibold text-slate-300">Message</label>
+                            <textarea rows="5" placeholder="How can we help you?" class="w-full rounded-xl border border-white/10 bg-slate-950/50 py-4 px-5 focus:border-brand-primary focus:outline-none transition-all backdrop-blur-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full rounded-xl bg-brand-primary py-5 text-lg font-bold text-white shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 transition-all">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-dark-surface py-12 text-center text-sm text-slate-500">
+        <p>© 2026 FreeTools Hub. Responses usually within 24 hours.</p>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+</body>
+</html>

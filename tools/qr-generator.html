@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator | FreeTools Hub</title>
+    <meta name="description" content="Generate high-quality QR codes for free. Enter text or URL and download your QR code instantly. Fast, easy, and secure.">
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-surface text-slate-100">
+    <div class="mesh-glow-1"></div>
+    <div class="mesh-glow-2"></div>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 nav-glass">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
+            <div class="hidden items-center space-x-6 md:flex text-sm font-medium">
+                <a href="/" class="hover:text-brand-primary">Home</a>
+                <a href="/about.html" class="hover:text-brand-primary">About</a>
+                <a href="/contact.html" class="hover:text-brand-primary">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="text-2xl md:hidden text-slate-400"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Breadcrumb -->
+        <nav class="mb-8 flex items-center space-x-2 text-sm text-slate-500">
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+            <span class="text-slate-300">QR Code Generator</span>
+        </nav>
+
+        <div class="grid gap-12 lg:grid-cols-3">
+            <!-- Tool Area -->
+            <div class="lg:col-span-2">
+                <div class="glass rounded-[2.5rem] p-8 md:p-12">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-500/10 text-orange-500">
+                            <i class="fas fa-qrcode text-2xl"></i>
+                        </div>
+                        <h1 class="text-3xl font-extrabold tracking-tight">QR Code Generator</h1>
+                    </div>
+                    <p class="mt-4 text-slate-400 text-lg">Generate custom QR codes from any text or URL instantly.</p>
+
+                    <div class="ad-container mt-8">
+                        <div class="ad-placeholder">Tool Page Top Ad</div>
+                    </div>
+
+                    <div class="mt-12 space-y-8">
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold uppercase tracking-wider text-slate-500">Enter Text or URL</label>
+                            <input type="text" id="qr-text" placeholder="https://example.com" class="w-full rounded-2xl border border-white/10 bg-slate-950/50 py-4 px-6 text-lg focus:border-brand-primary/50 focus:outline-none focus:ring-1 focus:ring-brand-primary transition-all backdrop-blur-sm">
+                        </div>
+
+                        <button id="generate-qr" class="w-full rounded-2xl bg-brand-primary py-5 text-lg font-bold text-white shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 hover:scale-[1.01] active:scale-95 transition-all">
+                            Generate QR Code
+                        </button>
+
+                        <!-- Result -->
+                        <div id="qr-result-container" class="hidden flex-col items-center justify-center space-y-8 animate-fade-in">
+                            <div class="rounded-3xl bg-white p-6 shadow-2xl shadow-black/50">
+                                <canvas id="qr-canvas"></canvas>
+                            </div>
+                            <button id="download-qr" class="inline-flex items-center rounded-xl bg-slate-800 px-8 py-4 font-bold text-white hover:bg-slate-700 transition-colors">
+                                <i class="fas fa-download mr-3"></i> Download PNG
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ad-container mt-12">
+                        <div class="ad-placeholder">Tool Page Middle Ad</div>
+                    </div>
+
+                    <!-- SEO Content -->
+                    <div class="mt-20 prose prose-invert prose-slate max-w-none">
+                        <h2 class="text-2xl font-bold">What is a QR Code?</h2>
+                        <p>
+                            A Quick Response (QR) code is a type of matrix barcode first designed in 1994 for the automotive industry in Japan. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently.
+                        </p>
+                        <h2 class="text-2xl font-bold mt-12">How to use this QR Generator?</h2>
+                        <ol>
+                            <li>Type or paste your URL or text into the input field above.</li>
+                            <li>Click the "Generate QR Code" button.</li>
+                            <li>The tool will instantly create a unique QR code for you.</li>
+                            <li>Click "Download PNG" to save the code to your device.</li>
+                        </ol>
+                        <h2 class="text-2xl font-bold mt-12">Benefits of using QR Codes</h2>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Fast Access:</strong> Users can scan and visit sites in seconds.</li>
+                            <li><strong>Versatility:</strong> Use them on business cards, posters, or menus.</li>
+                            <li><strong>Touchless:</strong> Perfect for a post-pandemic world.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ad-container mt-12">
+                    <div class="ad-placeholder">Tool Page Bottom Ad</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-8">
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="text-lg font-bold">Related Tools</h3>
+                    <div class="mt-6 space-y-4">
+                        <a href="/tools/url-encoder.html" class="flex items-center space-x-4 group">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-slate-400 group-hover:bg-brand-primary/10 group-hover:text-brand-primary transition-colors">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <span class="font-medium group-hover:text-brand-primary">URL Encoder</span>
+                        </a>
+                        <a href="/tools/slug-generator.html" class="flex items-center space-x-4 group">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 text-slate-400 group-hover:bg-brand-primary/10 group-hover:text-brand-primary transition-colors">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <span class="font-medium group-hover:text-brand-primary">Slug Generator</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-8">
+                    <h3 class="text-lg font-bold">Advertisement</h3>
+                    <div class="ad-container mt-6 bg-slate-800/40 p-0 overflow-hidden">
+                        <div class="ad-placeholder h-60">Sidebar Ad Unit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 border-t border-white/5 bg-dark-surface py-12 text-center text-sm text-slate-500">
+        <p>© 2026 FreeTools Hub. Privacy focused tools.</p>
+    </footer>
+
+    <script src="/assets/js/common.js"></script>
+    <script type="module" src="/assets/js/tools/qr-generator.js"></script>
+</body>
+</html>

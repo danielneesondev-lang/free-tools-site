@@ -1,18 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Free Tools Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeTools Hub | Fast • Free • Simple Online Tools</title>
+    <meta name="description" content="Access a wide range of free online tools including QR Code Generator, Word Counter, JSON Formatter, and more. Fast, simple, and privacy-focused tools for everyday tasks.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FreeTools Hub - Professional Online Tools">
+    <meta property="og:description" content="Free, fast, and secure online tools for developers and everyday use.">
+    
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-dark-surface text-slate-100">
+    <!-- Mesh Gradient Backgrounds -->
+    <div class="mesh-glow-1"></div>
+    <div class="mesh-glow-2"></div>
 
-<h1>My Free Tools</h1>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 nav-glass">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
 
-<div class="tools">
-  <a href="tools/qr.html">QR Generator</a>
-  <a href="tools/word.html">Word Counter</a>
-  <a href="tools/json.html">JSON Formatter</a>
-</div>
+            <!-- Desktop Nav -->
+            <div class="hidden items-center space-x-8 md:flex">
+                <a href="/" class="text-sm font-medium hover:text-brand-primary transition-colors">Home</a>
+                <a href="#featured" class="text-sm font-medium hover:text-brand-primary transition-colors">Featured</a>
+                <a href="#all-tools" class="text-sm font-medium hover:text-brand-primary transition-colors">All Tools</a>
+                <a href="/about.html" class="text-sm font-medium hover:text-brand-primary transition-colors">About</a>
+                <a href="/contact.html" class="rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold text-white hover:bg-brand-primary/90 transition-all">Contact Us</a>
+            </div>
 
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="text-2xl md:hidden">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col border-t border-white/5 bg-dark-surface px-6 py-4 md:hidden">
+            <a href="/" class="py-3 text-lg font-medium">Home</a>
+            <a href="#featured" class="py-3 text-lg font-medium">Featured</a>
+            <a href="#all-tools" class="py-3 text-lg font-medium">All Tools</a>
+            <a href="/about.html" class="py-3 text-lg font-medium">About</a>
+            <a href="/contact.html" class="mt-2 rounded-xl bg-brand-primary py-3 text-center text-lg font-semibold text-white">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+            <div class="container mx-auto px-6 text-center">
+                <div class="inline-flex rounded-full border border-brand-primary/20 bg-brand-primary/5 px-4 py-1.5 text-sm font-semibold text-brand-primary">
+                    🚀 Fast • Free • Simple Online Tools
+                </div>
+                <h1 class="mt-8 text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
+                    Ultimate Toolbox for <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">Everyone</span>
+                </h1>
+                <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-400 md:text-xl">
+                    High-quality web tools to help you with your daily digital tasks. Secure, fast, and completely free to use. No registration required.
+                </p>
+
+                <!-- Tool Search -->
+                <div class="mx-auto mt-12 max-w-2xl">
+                    <div class="group relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-5 text-slate-400">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" id="tool-search" placeholder="Search for tools (e.g. QR, Word Count, JSON...)" class="w-full rounded-2xl border border-white/10 bg-slate-950/50 py-5 pl-14 pr-6 text-lg placeholder:text-slate-500 focus:border-brand-primary/50 focus:outline-none focus:ring-4 focus:ring-brand-primary/10 transition-all backdrop-blur-sm">
+                    </div>
+                </div>
+
+                <!-- Ad Section: Hero Banner -->
+                <div class="ad-container mt-16 max-w-4xl mx-auto">
+                    <div class="ad-placeholder">Advertisement: Hero Banner Ad Unit</div>
+                </div>
+            </div>
+
+            <!-- Background Glow -->
+            <div class="absolute top-0 left-1/2 -z-10 h-[500px] w-full -translate-x-1/2 rounded-full bg-brand-primary/10 blur-[120px]"></div>
+        </section>
+
+        <!-- Featured Tools -->
+        <section id="featured" class="py-20 bg-white/[0.02]">
+            <div class="container mx-auto px-6">
+                <div class="flex items-end justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Featured Tools</h2>
+                        <p class="mt-2 text-slate-400">Our most popular and essential tools.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Tool Card: QR Generator -->
+                    <a href="/tools/qr-generator.html" class="tool-card group glass rounded-3xl p-8 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-500 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-qrcode text-2xl"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">QR Code Generator</h3>
+                        <p class="mt-2 text-slate-400">Create custom QR codes from any text or URL instantly.</p>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-brand-primary">
+                            Try Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool Card: Word Counter -->
+                    <a href="/tools/word-counter.html" class="tool-card group glass rounded-3xl p-8 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-align-left text-2xl"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">Word Counter</h3>
+                        <p class="mt-2 text-slate-400">Count words, characters, and reading time for your text.</p>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-brand-primary">
+                            Try Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+
+                    <!-- Tool Card: JSON Formatter -->
+                    <a href="/tools/json-formatter.html" class="tool-card group glass rounded-3xl p-8 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-500/10 text-green-500 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold">JSON Formatter</h3>
+                        <p class="mt-2 text-slate-400">Beautify and validate your JSON data with one click.</p>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-brand-primary">
+                            Try Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ad Section: Between Sections -->
+                <div class="ad-container mt-12">
+                    <div class="ad-placeholder">Advertisement: Middle Banner Ad Unit</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Tools Grid -->
+        <section id="all-tools" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Explore All Tools</h2>
+                    <p class="mt-4 text-slate-400">Browse our complete collection of free online utilities.</p>
+                </div>
+
+                <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- Tool Card: Password Generator -->
+                    <a href="/tools/password-generator.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400">
+                            <i class="fas fa-lock text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">Password Generator</h3>
+                        <p class="mt-2 text-sm text-slate-400">Secure, random passwords instantly.</p>
+                    </a>
+
+                    <!-- Tool Card: Age Calculator -->
+                    <a href="/tools/age-calculator.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500/10 text-pink-400">
+                            <i class="fas fa-birthday-cake text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">Age Calculator</h3>
+                        <p class="mt-2 text-sm text-slate-400">Calculate exact age in years, months, days.</p>
+                    </a>
+
+                    <!-- Tool Card: Base64 Tool -->
+                    <a href="/tools/base64-tool.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400">
+                            <i class="fas fa-exchange-alt text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">Base64 Encoder</h3>
+                        <p class="mt-2 text-sm text-slate-400">Encode or decode text to Base64 easily.</p>
+                    </a>
+
+                    <!-- Tool Card: URL Encoder -->
+                    <a href="/tools/url-encoder.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400">
+                            <i class="fas fa-link text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">URL Encoder</h3>
+                        <p class="mt-2 text-sm text-slate-400">Safely encode and decode URLs for web.</p>
+                    </a>
+
+                    <!-- Tool Card: Slug Generator -->
+                    <a href="/tools/slug-generator.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400">
+                            <i class="fas fa-font text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">Slug Generator</h3>
+                        <p class="mt-2 text-sm text-slate-400">Create SEO-friendly URL slugs from text.</p>
+                    </a>
+
+                    <!-- Tool Card: BMI Calculator -->
+                    <a href="/tools/bmi-calculator.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">BMI Calculator</h3>
+                        <p class="mt-2 text-sm text-slate-400">Check your Body Mass Index quickly.</p>
+                    </a>
+
+                    <!-- Tool Card: Color Picker -->
+                    <a href="/tools/color-picker.html" class="tool-card group glass rounded-2xl p-6 hover:bg-slate-800/50 transition-all">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-500/10 text-rose-400">
+                            <i class="fas fa-eye-dropper text-xl"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold">Color Picker</h3>
+                        <p class="mt-2 text-sm text-slate-400">Pick colors and get HEX/RGB values.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section class="py-24 bg-white/[0.01]">
+            <div class="container mx-auto max-w-4xl px-6">
+                <article class="prose prose-invert prose-slate max-w-none">
+                    <h2 class="text-3xl font-bold">Why Use FreeTools Hub?</h2>
+                    <p>
+                        In today's digital world, specialized tasks often require quick solutions without the need to download heavy software or register for accounts. FreeTools Hub is designed to be your go-to destination for lightweight, fast, and privacy-respecting online utilities.
+                    </p>
+                    <p>
+                        Whether you are a developer looking for a <strong>JSON Formatter</strong>, a marketer needing a <strong>QR Code Generator</strong>, or a student needing an <strong>Age Calculator</strong>, we have you covered. All our tools run directly in your browser, ensuring that your data stays on your device.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mt-12 mb-6">Frequently Asked Questions</h3>
+                    <div class="space-y-6">
+                        <div class="rounded-2xl bg-white/5 p-6 border border-white/5">
+                            <h4 class="text-lg font-bold">Is it really free?</h4>
+                            <p class="mt-2 text-slate-400">Yes! All our tools are 100% free with no hidden charges or premium subscriptions.</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/5 p-6 border border-white/5">
+                            <h4 class="text-lg font-bold">Is my data secure?</h4>
+                            <p class="mt-2 text-slate-400">Privacy is our priority. Most of our tools process data locally in your browser, meaning your input never even reaches our servers.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-primary/20 via-brand-secondary/20 to-transparent p-12 text-center border border-white/10 md:p-24">
+                    <h2 class="text-3xl font-bold md:text-5xl">Ready to simplify your tasks?</h2>
+                    <p class="mx-auto mt-6 max-w-xl text-lg text-slate-400">
+                        Bookmark FreeTools Hub and have your favorite utilities just one click away.
+                    </p>
+                    <div class="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                        <a href="#all-tools" class="rounded-full bg-brand-primary px-10 py-4 font-bold text-white shadow-lg shadow-brand-primary/25 hover:bg-brand-primary/90 transition-all">Get Started Now</a>
+                        <a href="/about.html" class="rounded-full border border-white/10 bg-white/5 px-10 py-4 font-bold hover:bg-white/10 transition-all">Learn More</a>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-brand-primary/10 blur-[80px]"></div>
+                    <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-secondary/10 blur-[80px]"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-dark-surface py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid gap-12 lg:grid-cols-4">
+                <div class="lg:col-span-1">
+                    <a href="/" class="flex items-center space-x-2">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                            <i class="fas fa-tools text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+                    </a>
+                    <p class="mt-6 text-sm leading-relaxed text-slate-400">
+                        Fast, free, and secure online tools for everyone. Simplify your digital life with our premium collection of web utilities.
+                    </p>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold">Popular Tools</h4>
+                    <ul class="mt-6 space-y-4 text-sm text-slate-500">
+                        <li><a href="/tools/qr-generator.html" class="hover:text-brand-primary transition-colors">QR Generator</a></li>
+                        <li><a href="/tools/word-counter.html" class="hover:text-brand-primary transition-colors">Word Counter</a></li>
+                        <li><a href="/tools/json-formatter.html" class="hover:text-brand-primary transition-colors">JSON Formatter</a></li>
+                        <li><a href="/tools/password-generator.html" class="hover:text-brand-primary transition-colors">Password Generator</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold">Company</h4>
+                    <ul class="mt-6 space-y-4 text-sm text-slate-500">
+                        <li><a href="/about.html" class="hover:text-brand-primary transition-colors">About Us</a></li>
+                        <li><a href="/contact.html" class="hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="hover:text-brand-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-brand-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold">Newsletter</h4>
+                    <p class="mt-6 text-sm text-slate-500">Get updates about our new tools.</p>
+                    <form class="mt-4 flex">
+                        <input type="email" placeholder="Email address" class="w-full rounded-l-lg border border-white/10 bg-white/5 py-2 px-4 text-sm focus:border-brand-primary focus:outline-none transition-all">
+                        <button class="rounded-r-lg bg-brand-primary px-4 py-2 text-sm font-bold text-white hover:bg-brand-primary/90">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-16 flex flex-col items-center justify-between border-t border-white/5 pt-8 md:flex-row">
+                <p class="text-sm text-slate-500">© 2026 FreeTools Hub. All rights reserved.</p>
+                <div class="ad-container mt-6 w-full max-w-xl md:mt-0">
+                    <div class="ad-placeholder">Advertisement: Footer Banner</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/common.js"></script>
 </body>
 </html>

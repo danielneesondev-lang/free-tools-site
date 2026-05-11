@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder & Decoder | FreeTools Hub</title>
+    <meta name="description" content="Encode any text to Base64 or decode from Base64 instantly. Fast, secure, and client-side processing for your sensitive data.">
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-surface text-slate-100">
+    <header class="border-b border-white/5 bg-dark-surface/80 backdrop-blur-lg">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
+            <a href="/" class="text-sm font-medium hover:text-brand-primary">Home</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="glass rounded-[2.5rem] p-8 md:p-12">
+            <div class="flex items-center space-x-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400">
+                    <i class="fas fa-exchange-alt text-2xl"></i>
+                </div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Base64 Encoder & Decoder</h1>
+            </div>
+
+            <div class="mt-12 grid gap-8 lg:grid-cols-2">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-bold uppercase tracking-wider text-slate-500">Input Text</label>
+                        <button id="clear-btn" class="text-xs font-bold text-rose-400 hover:underline">Clear</button>
+                    </div>
+                    <textarea id="base64-input" rows="10" placeholder="Type or paste text here..." class="w-full rounded-2xl border border-white/10 bg-white/5 p-6 font-mono text-sm focus:border-brand-primary focus:outline-none transition-all"></textarea>
+                    
+                    <div class="flex space-x-4">
+                        <button id="encode-btn" class="flex-1 rounded-xl bg-brand-primary py-4 font-bold transition-all hover:bg-brand-primary/90">Encode to Base64</button>
+                        <button id="decode-btn" class="flex-1 rounded-xl bg-slate-800 py-4 font-bold transition-all hover:bg-slate-700">Decode Base64</button>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-bold uppercase tracking-wider text-slate-500">Output Result</label>
+                        <button id="copy-btn" class="text-xs font-bold text-brand-primary hover:underline">Copy Result</button>
+                    </div>
+                    <textarea id="base64-output" rows="10" readonly placeholder="Result will appear here..." class="w-full rounded-2xl border border-white/10 bg-white/5 p-6 font-mono text-sm text-slate-300 focus:outline-none"></textarea>
+                </div>
+            </div>
+
+            <div class="mt-20 prose prose-invert prose-slate max-w-none">
+                <h2 class="text-2xl font-bold">What is Base64?</h2>
+                <p>Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. It is commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.</p>
+                <h2 class="text-2xl font-bold mt-12">Security & Privacy</h2>
+                <p>Base64 is <strong>NOT</strong> a form of encryption. It is a simple encoding scheme. Anyone can easily decode Base64 data back to plain text. Do not use this tool to "protect" passwords or sensitive keys. Use it for data transmission and formatting purposes only.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/common.js"></script>
+    <script type="module" src="/assets/js/tools/base64-tool.js"></script>
+</body>
+</html>

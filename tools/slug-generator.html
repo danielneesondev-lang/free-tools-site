@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Slug Generator | FreeTools Hub</title>
+    <meta name="description" content="Generate search engine friendly URL slugs from your titles. Automatically handle special characters and spaces. Perfect for bloggers and developers.">
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-surface text-slate-100">
+    <header class="border-b border-white/5 bg-dark-surface/80 backdrop-blur-lg">
+        <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center space-x-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
+                    <i class="fas fa-tools text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">FreeTools<span class="text-brand-primary">Hub</span></span>
+            </a>
+            <a href="/" class="text-sm font-medium hover:text-brand-primary">Home</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="mx-auto max-w-3xl">
+            <div class="glass rounded-[2.5rem] p-8 md:p-12">
+                <div class="flex items-center space-x-4">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400">
+                        <i class="fas fa-font text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-extrabold tracking-tight">Slug Generator</h1>
+                        <p class="text-slate-400">Create SEO-friendly URL slugs instantly.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 space-y-8">
+                    <div class="space-y-4">
+                        <label class="block text-sm font-bold uppercase tracking-wider text-slate-500">Enter Title or Text</label>
+                        <input type="text" id="slug-input" placeholder="How to build a professional website in 10 minutes" class="w-full rounded-2xl border border-white/10 bg-white/5 py-5 px-6 text-lg focus:border-brand-primary focus:outline-none transition-all">
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <label class="block text-sm font-bold uppercase tracking-wider text-slate-500">Generated Slug</label>
+                            <button id="copy-slug" class="text-xs font-bold text-brand-primary hover:underline">Copy Slug</button>
+                        </div>
+                        <input type="text" id="slug-output" readonly placeholder="how-to-build-a-professional-website" class="w-full rounded-2xl border border-white/10 bg-white/5 py-5 px-6 text-xl font-medium text-brand-primary focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="mt-20 prose prose-invert prose-slate max-w-none">
+                    <h2 class="text-2xl font-bold">What is a URL Slug?</h2>
+                    <p>A slug is the part of a URL which identifies a particular page on a website in an easy to read form. Instead of using a random string of numbers or IDs, slugs use words that describe the content of the page, making it much better for SEO and user experience.</p>
+                    <h2 class="text-2xl font-bold mt-12">Why use our Slug Generator?</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Automated:</strong> It instantly removes special characters like commas, brackets, and quotes.</li>
+                        <li><strong>Lowercase:</strong> It ensures all characters are lowercase.</li>
+                        <li><strong>Standardized:</strong> It uses hyphens as separators, which is the web standard for SEO.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/js/common.js"></script>
+    <script type="module" src="/assets/js/tools/slug-generator.js"></script>
+</body>
+</html>
